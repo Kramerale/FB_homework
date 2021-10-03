@@ -88,13 +88,14 @@ let arr;
 
 if(lang = 'ru'){
     arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
-    // console.log(arr);
-}else if(lang = 'en'){
-    arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
-    // console.log(arr);
+    console.log(arr);
 }else{
-    console.log('Unknown language');
+    arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+    console.log(arr);
 }
+// }else{
+//     console.log('Unknown language');
+// }
 
 // Пример 3 
 // Напишите код, который предлагает пользователю ввести целое 
@@ -113,12 +114,12 @@ if(lang = 'ru'){
 // значения "нет", горит зелёный сигнал светофора и 
 // выводиться сообщение, разрешающее переходить дорогу.
 
-let red = false;
-let yellow = false;
+let red;
+let yellow;
 
-if(red = true){
+if(red = false){
     console.log('Движение запрещено!');
-}else if(yellow = true){
+}else if(yellow = false){
     console.log('Приготовьтесь');
 }else{
     console.log('Движение разрешено!');
@@ -128,12 +129,22 @@ if(red = true){
 // Пример 5
 // Выведите столбец чисел от 1 до 12.
 
+let i = 1;
 
+while(i <= 12){
+    console.log(i);
+    i++;
+}
 
 // Пример 6
 // Выведите столбец чисел от 5 до 13.
 
+i = 5; //переменная i объявлена выше
 
+while(i <= 13){
+    console.log(i);
+    i++;
+}
 
 // Пример 7
 // Выведите столбец четных чисел в промежутке от 0 до 16.
@@ -142,3 +153,9 @@ if(red = true){
 
 // Пример 8 
 // С помощью цикла найдите сумму чисел arr = [2,5,8,3,6]
+
+let result = 1;
+arr = [2,5,8,3,6]; //переменная arr объявлена выше
+for(let i = 0; i < arr.length;){
+    result = result + arr[i];
+}
