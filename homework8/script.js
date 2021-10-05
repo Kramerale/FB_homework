@@ -86,16 +86,13 @@ if(minute >= 1 && minute <= 15){
 let lang = 'en';
 let arr;
 
-if(lang = 'ru'){
+if(lang == 'ru'){
     arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
     console.log(arr);
 }else{
     arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
     console.log(arr);
 }
-// }else{
-//     console.log('Unknown language');
-// }
 
 // Пример 3 
 // Напишите код, который предлагает пользователю ввести целое 
@@ -105,7 +102,27 @@ if(lang = 'ru'){
 // Достаточно будет определить, является ли число однозначным, 
 // двузначным или трехзначным и более.
 
+let num = prompt('Введите целое число:');
 
+if(num > 0 && String(num).length == 1){
+    console.log(`Число ${num} однозначное положительное`);
+}else if(num < 0 && String(num).length == 1){
+    console.log(`Число ${num} однозначное отрицательное`);
+}else if(num > 0 && String(num).length == 2){
+    console.log(`Число ${num} двузначное положительное`);
+}else if(num < 0 && String(num).length == 2){
+    console.log(`Число ${num} двузначное отрицательное`);
+}else if(num > 0 && String(num).length == 3){
+    console.log(`Число ${num} трехзначное положительное`);
+}else if(num < 0 && String(num).length == 3){
+    console.log(`Число ${num} трехзначное отрицательное`);
+}else if(num > 0 && String(num).length > 3){
+    console.log(`Число ${num} многозначное положительное`);
+}else if(num < 0 && String(num).length > 3){
+    console.log(`Число ${num} многозначное отрицательное`);
+}else{
+    console.log('Некорректное значение');
+}
 
 // Пример 4
 // Создаются переменные red и yellow для красного и 
@@ -149,13 +166,18 @@ while(i <= 13){
 // Пример 7
 // Выведите столбец четных чисел в промежутке от 0 до 16.
 
-
+for(let i = 2; i <= 16; i++){
+    if(i % 2 == 0){
+        console.log(i);
+    }
+}
 
 // Пример 8 
 // С помощью цикла найдите сумму чисел arr = [2,5,8,3,6]
 
-let result = 1;
+let result = 0;
 arr = [2,5,8,3,6]; //переменная arr объявлена выше
-for(let i = 0; i < arr.length;){
+for(i = 0; i < arr.length; i++){
     result = result + arr[i];
 }
+console.log(result);
