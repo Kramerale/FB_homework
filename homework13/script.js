@@ -66,25 +66,25 @@
 
 // Дана строка 'JS'. Сделайте из нее строку 'js'.
 
-// let txt = 'JS';
-// console.log(txt.toLowerCase());
+let txt = 'JS';
+console.log(txt.toLowerCase());
 
 // Дана строка 'я люблю JS!'. Вырежите из нее слово 
 // 'люблю' и слово 'javascript' тремя разными способами 
 // (через substr, substring, slice).
 
-// let txt = 'я люблю JS!';
+txt = 'я люблю JS!'; // переменная txt объявлена выше
 
-// console.log(txt.substr(2,8));
-// console.log(txt.substring(2,10));
-// console.log(txt.slice(2,10));
+console.log(txt.substr(2,8));
+console.log(txt.substring(2,10));
+console.log(txt.slice(2,10));
 
 // Дана строка 'я люблю JS!'. Найдите позицию 
 // подстроки 'люблю'.
 
-// let txt = 'я люблю JS!';
+txt = 'я люблю JS!'; // переменная txt объявлена выше
 
-// console.log(txt.indexOf('люблю'));
+console.log(txt.indexOf('люблю'));
 
 // Дана переменная txt, в которой хранится какой-либо текст. 
 // Реализуйте обрезание длинного текста по следующему 
@@ -94,7 +94,16 @@
 // троеточие '...'. В противном случае в переменную 
 // result запишем содержимое переменной txt.
 
+txt = 'Lorem ipsum dolor sit amet consectetur'; // переменная txt объявлена выше
+let n = 10;
 
+if(txt.length > n){
+    let result = txt.substr(0,n) + '...';
+    console.log(result);
+}else{
+    let result = txt;
+    console.log(result);
+}
 
 // Для решения задач данного блока вам понадобятся следующие 
 // методы: replace.
@@ -102,22 +111,22 @@
 // Замените все  '-' на '!' с помощью глобального 
 // поиска и замены.
 
-// let txt = 'Я-люблю-JS';
+txt = 'Я-люблю-JS'; // переменная txt объявлена выше
 
-// console.log(txt.replace(/-/g, '!'));
+console.log(txt.replace(/-/g, '!'));
 
 // Дана строка 'я люблю JS'. С помощью метода split 
 // запишите каждое слово этой строки в отдельный элемент 
 // массива.
 
-// let txt = 'я люблю JS';
+txt = 'я люблю JS'; // переменная txt объявлена выше
 
-// console.log(txt.split(''));
+console.log(txt.split(''));
 
 // Дана строка 'привет мир'. С помощью метода split 
 // запишите каждый символ этой строки в отдельный элемент 
 // массива.
 
-// let txt = 'привет мир';
+txt = 'привет мир'; // переменная txt объявлена выше
 
-// console.log(txt.split(''));
+console.log(txt.split(''));
