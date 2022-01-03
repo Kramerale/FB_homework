@@ -70,4 +70,18 @@ window.addEventListener('DOMContentLoaded', ()=>{
         }
     }
     setClock('.timer', timeEnd);
+
+    //modal
+
+    const modalTrigger = document.querySelectorAll('[data-modal]'),
+          modal = document.querySelectorAll('.modal'),
+          modalClose = document.querySelectorAll('[data-close]');
+
+         modalTrigger.forEach(btn =>{
+             btn.addEventListener('click', ()=>{
+                 modal.classList.add('show');
+                 modal.classList.remove('hide');
+             });
+         });
+         modalClose 
 });
